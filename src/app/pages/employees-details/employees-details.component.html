@@ -1,0 +1,63 @@
+<section class="view-user">
+  <div class="wrapper">
+    <div class="content">
+      <div class="custom-header">
+        <h1 class="m-0">Employee Details</h1>
+        <a [routerLink]="['../../employees']" [queryParams]="queryParams">Go back</a>
+      </div>
+      <div class="mt-3 card p-3" *ngIf="employee">
+        <div class="basic-info">
+          <div class="row w-100 m-0 pt-3">
+            <div class="col-4 mb-3">
+              <div class="details">
+                <h6 class="m-0">Full Name</h6>
+                <p class="m-0">{{employee.fullName}}</p>
+              </div>
+            </div>
+            <div class="col-4 mb-3">
+              <div class="details">
+                <h6 class="m-0">Company</h6>
+                <p class="m-0">{{employee.company}}</p>
+              </div>
+            </div>
+            <div class="col-4 mb-3">
+              <div class="details">
+                <h6 class="m-0">Email</h6>
+                <p class="m-0">{{employee.email}}</p>
+              </div>
+            </div>
+            <div class="col-4 mb-3">
+              <div class="details">
+                <h6 class="m-0">Phone No</h6>
+                <p class="m-0">{{employee.phone}}</p>
+              </div>
+            </div>
+            <div class="col-4 mb-3">
+              <div class="details">
+                <h6 class="m-0">Gender</h6>
+                <p class="m-0">{{employee.gender? 'Male': 'Female'}}</p>
+              </div>
+            </div>
+            <div class="col-4 mb-3">
+              <div class="details">
+                <h6 class="m-0">Position</h6>
+                <p class="m-0">{{employee.position}}</p>
+              </div>
+            </div>
+            <div class="col-4 mb-3">
+              <div class="details">
+                <h6 class="m-0">Date of Birth</h6>
+                <p class="m-0">{{employee.dob}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-3 card p-3" *ngIf="userNotFoundMsg">
+        <div class="alert alert-danger" role="alert">
+          {{userNotFoundMsg}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
